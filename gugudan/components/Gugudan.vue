@@ -25,10 +25,9 @@ export default {
     this.input.focus();
   },
   methods: {
-    getNum () {
-      return Math.floor(Math.random() * 9) + 1;
-    },
     createQuestion () {
+     const getNum = () => Math.floor(Math.random() * 9) + 1;
+
       this.num1 = this.getNum();
       this.num2 = this.getNum();
     },

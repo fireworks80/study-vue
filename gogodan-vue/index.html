@@ -27,10 +27,9 @@
         this.changeQuestion();
       },
       methods: {
-        ranNum () {
-          return Math.floor(Math.random() * 9) + 1;
-        },
         changeQuestion () {
+          const ranNum = () => Math.floor(Math.random() * 9) + 1;
+
           this.num1 = this.ranNum();
           this.num2 = this.ranNum();
         },
