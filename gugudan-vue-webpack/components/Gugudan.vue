@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>{{num1}} X {{num2}}</p>
-    <input ref="input" type="text" v-model="answer"><button @click="submit">정답</button>
+    <inputEl ref="inputEl" type="text" v-model="answer"><button @click="submit">정답</button>
     <p>{{trueOrFalse}}</p>
   </div>
 </template>
@@ -14,15 +14,15 @@ export default {
       num2: 0,
       answer: '',
       trueOrFalse: '',
-      input: null
+      inputEl: null
     };
   },
   created () {
     this.createQuestion();
   },
   mounted () {
-    this.input = this.$refs.input;
-    this.input.focus();
+    this.inputEl = this.$refs.inputEl;
+    this.inputEl.focus();
   },
   methods: {
     createQuestion () {
@@ -36,7 +36,7 @@ export default {
 
       if (isCorrect()) {
         this.trueOrFalse = '참';
-        this.input.focus();
+        this.inputEl.focus();
         this.createQuestion();
       } else {
         this.trueOrFalse = '거짓';
