@@ -30,8 +30,8 @@
         changeQuestion () {
           const ranNum = () => Math.floor(Math.random() * 9) + 1;
 
-          this.num1 = this.ranNum();
-          this.num2 = this.ranNum();
+          this.num1 = ranNum();
+          this.num2 = ranNum();
         },
         checkAnswer () {
           this.correct = this.num1 * this.num2 === Number(this.answer) ? '참' : '거짓';
