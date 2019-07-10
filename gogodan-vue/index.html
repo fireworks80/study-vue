@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>구구단</title>
+</head>
+<body>
+  <h1>구구단 게임</h1>
+  <div id="app">
+    <p><label for="forAnswer">{{num1}} X {{num2}} ?</label></p>
+    <p><input type="text" id="forAnswer" v-model="answer"><button @click="checkAnswer">click</button></p>
+    <p v-if="correct">{{correct}}</p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        num1: null,
+        num2: null,
+        answer: '',
+        correct: null
+      },
+      created () {
+        this.changeQuestion();
+      },
+      methods: {
+        ranNum () {
+          return Math.floor(Math.random() * 9) + 1;
+        },
+        changeQuestion () {
+          this.num1 = this.ranNum();
+          this.num2 = this.ranNum();
+        },
+        checkAnswer () {
+          this.correct = this.num1 * this.num2 === Number(this.answer) ? '참' : '거짓';
+          this.resetQuestion();
+        },
+        resetQuestion () {
+          if (this.correct === '참') {
+            this.changeQuestion();
+          }
+          this.answer = '';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
