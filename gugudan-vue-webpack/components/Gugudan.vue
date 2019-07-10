@@ -28,8 +28,8 @@ export default {
     createQuestion () {
      const getNum = () => Math.floor(Math.random() * 9) + 1;
 
-      this.num1 = this.getNum();
-      this.num2 = this.getNum();
+      this.num1 = getNum();
+      this.num2 = getNum();
     },
     submit () {
       const isCorrect = () => this.num1 * this.num2 === Number(this.answer);
