@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <ul>
+      <li><router-link to="/2018">2018</router-link></li>
+      <li><router-link to="/2019">2019</router-link></li>
+    </ul>
     <router-view/>
   </div>
 </template>
