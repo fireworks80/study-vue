@@ -33,8 +33,4 @@ export default {
     }
   }
 }
-
-.desc {
-  // @include a11y;
-}
 </style>

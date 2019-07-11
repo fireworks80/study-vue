@@ -10,12 +10,5 @@ module.exports = {
       template: 'public/index-m.html',
       filename: 'index-m.html'
     }
-  },
-  css: {
-    loaderOptions: {
-      sass: {
-        data: `@import "@/assets/styles/global/global.scss"`
-      }
-    }
   }
 }
