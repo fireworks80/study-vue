@@ -5,12 +5,12 @@
 </template>
 <script>
 import { og2018 } from '@/ogInfo/og.js'
-import { getOgData } from '@/util/getOgData.js'
+import { setMetaTags } from '@/util/setMetaTags.js'
 export default {
 
   metaInfo: {
     title: 'Vue meta mobile',
-    meta: getOgData(og2018)
+    meta: setMetaTags(og2018)
   },
   methods: {
     createImg () {

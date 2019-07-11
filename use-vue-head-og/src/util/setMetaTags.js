@@ -1,6 +1,6 @@
 import isMobile from './checkUserAgent'
 
-export function getOgData (ogArr) {
+export function setMetaTags (ogArr) {
   const newOg = [...ogArr]
 
   newOg.push(
