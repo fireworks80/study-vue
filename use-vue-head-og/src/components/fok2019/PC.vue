@@ -3,11 +3,11 @@
 </template>
 <script>
 import { og2019 } from '@/ogInfo/og.js'
-import { setMetaTags } from '@/util/setMetaTags.js'
+import { setMetaInfo } from '@/util/setMetaInfo.js'
 export default {
   metaInfo: {
-    title: 'Vue meta pc',
-    meta: setMetaTags(og2019)
+    title: '2019 Vue meta pc',
+    meta: setMetaInfo(og2019)
   }
 }
 </script>

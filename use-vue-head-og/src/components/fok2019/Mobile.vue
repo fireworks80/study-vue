@@ -6,11 +6,11 @@
 </template>
 <script>
 import { og2019 } from '@/ogInfo/og.js'
-import { setMetaTags } from '@/util/setMetaTags.js'
+import { setMetaInfo } from '@/util/setMetaInfo.js'
 export default {
   metaInfo: {
     title: 'Vue meta mobile',
-    meta: setMetaTags(og2019)
+    meta: setMetaInfo(og2019)
   },
   methods: {
     createImg () {
