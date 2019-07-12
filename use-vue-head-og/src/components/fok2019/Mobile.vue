@@ -6,9 +6,9 @@
 </template>
 <script>
 import fok2019Meta from '@/js/meta/fok2019.json'
-import { setMetaInfo } from '@/util/setMetaInfo.js'
+import { getViewport } from '@/util/getViewport.js'
 export default {
-  metaInfo: setMetaInfo(fok2019Meta),
+  metaInfo: getViewport(fok2019Meta),
   methods: {
     createImg() {
       return require('@/assets/images/m/img.jpg')
