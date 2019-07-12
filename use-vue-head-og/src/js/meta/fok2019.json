@@ -1,0 +1,30 @@
+{
+  "title": "fok2019",
+  "meta": [
+    {
+      "property": "og:title",
+      "content": "The new arteon - 2019",
+      "vmid": "og:title"
+    },
+    {
+      "property": "og:type",
+      "content": "website",
+      "vmid": "og:type"
+    },
+    {
+      "property": "og:url",
+      "content": "https://arteon.vwkr.co.kr",
+      "vmid": "og:url"
+    },
+    {
+      "property": "og:description",
+      "content": "차, 그 이상의 아름다움 2019",
+      "vmid": "og:description"
+    },
+    {
+      "property": "og:image",
+      "content": "https://vwkr-arteon.s3.amazonaws.com/static/showroom/sns/600x315-v2.jpg",
+      "vmid": "og:image"
+    }
+  ]
+}

@@ -1,19 +1,16 @@
 <template>
   <div class="wrap">
     2019 - mobile
-    <img :src="createImg()" alt="">
+    <img :src="createImg()" alt="" />
   </div>
 </template>
 <script>
-import { og2019 } from '@/ogInfo/og.js'
-import { setMetaTags } from '@/util/setMetaTags.js'
+import fok2019Meta from '@/js/meta/fok2019.json'
+import { getViewport } from '@/util/getViewport.js'
 export default {
-  metaInfo: {
-    title: 'Vue meta mobile',
-    meta: setMetaTags(og2019)
-  },
+  metaInfo: getViewport(fok2019Meta),
   methods: {
-    createImg () {
+    createImg() {
       return require('@/assets/images/m/img.jpg')
     }
   }
