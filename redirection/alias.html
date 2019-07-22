@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>alise예제</title>
+  </head>
+  <body>
+    <div id="app">
+      <router-view></router-view>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.7/vue-router.js"></script>
+    <script>
+
+      const A = {
+        template: '<p>A</p>'
+      };
+
+      const C = {
+        template: '<p>C</p>'
+      };
+
+      const router = new VueRouter({
+        routes: [
+          {
+            path: '/a', component: A, alias: '/b' // /a로 접근시 A 컴포넌트를 보여주고, /b로 접근 했을때 url은 그대로 이면서 컴포넌트만 A를 보여준다.
+          },
+          {
+            path: '/c', component: C, alias: ['/d', '/e'] // alias는 하나 이상을 지정 할 수 있다.
+          }
+        ]
+      });
+      new Vue({router}).$mount('#app');
+    </script>
+  </body>
+</html>
