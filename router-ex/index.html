@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.js router</title>
+
+</head>
+<body>
+  <div id="app">
+    <router-link to="/top">top</router-link>
+    <router-link to="/users">users</router-link>
+    <router-link to="/users/new?redirect=true">신규사용자 등록</router-link>
+    <router-link to="/login">Login</router-link>
+    <router-link to="/logout">Logout</router-link>
+
+    <router-view></router-view>
+
+
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.7/vue-router.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
