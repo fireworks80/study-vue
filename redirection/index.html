@@ -7,7 +7,27 @@
     <title>리다이렉션 + 앨리어싱</title>
   </head>
   <body>
+    <div id="app">
+      <router-view></router-view>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.7/vue-router.js"></script>
+    <script>
+
+      const BComponent = {
+        template: '<p>b component 입니다.</p>'
+      };
+
+
+      const router = new VueRouter({
+        routes: [
+          {path: '/a', redirect: '/b'},
+          {path: '/b', component: BComponent},
+          {path: '*', redirect: '/notfound'}
+        ]
+      });
+
+      new Vue({router}).$mount('#app');
+    </script>
   </body>
 </html>
