@@ -2,6 +2,9 @@
   <div class="wrap">
     2019 - mobile
     <img :src="createImg()" alt="">
+    <section id="top">top</section>
+    <section id="mid">mid</section>
+    <section id="btm">btm</section>
   </div>
 </template>
 <script>
@@ -29,5 +32,15 @@ export default {
 
 img {
   width: 100%;
+}
+
+section {
+  height: 100vh;
+
+  @for $i from 1 to 4 {
+    &:nth-of-type(#{$i}) {
+      background-color: rgba(random(255), random(255), random(255), .6);
+    }
+  }
 }
 </style>
